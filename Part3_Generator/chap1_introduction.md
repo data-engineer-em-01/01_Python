@@ -164,13 +164,13 @@ with open("./Data/titanic.csv", 'r') as csv_file:
 
 1. Trouvez une méthode simple pour afficher le nombre de personne(s) qui répondent aux critères
 
-1. Créez une classe Passenger, comme suit, avec ses getter et setter Python, 
+1. Créez une classe Passenger, comme suit, avec ses getter et setter Python, nettoyez les données pour les champs suivants : Survived, Sex et Age.
 
 Nous allons revoir la notion de classe dans la suite du cours.
 
 ```python
 class Passenger:
-    def __init__(self, id, survived,pclass,name,sex,age ):
+    def __init__(self, id, survived, sex, age ):
         pass
 ```
 
