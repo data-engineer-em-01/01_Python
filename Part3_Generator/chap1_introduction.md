@@ -126,6 +126,30 @@ except StopIteration as e:
     print("stop")
 ```
 
+## 01.1 Exercice Itérator
+
+La notion proche des générateurs est la notion d'iterateur que l'on peut égelement définir avec une classe et des méthodes spéciales :
+
+```python
+class IterNumber:
+    
+    def __iter__(self):
+        pass 
+    
+    def __next__(self):
+        pass 
+
+# On itère sur la classe IterNumber
+for e in IterNumber():
+    pass
+```
+
+1. Créez son itérateur qui retourne des nombres affectés par un coefficient de réduction.
+
+```python
+IterNumber(coeff = .01, numbers = [91, 11, 100, 3938])
+```
+
 ## 02 Exercice titanic
 
 1. Affichez uniquement les femmes de moins de 41 ans qui ont survécu sur le Titanic, pour se faire utiliser le module csv de Python.
