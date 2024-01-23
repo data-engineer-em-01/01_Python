@@ -153,7 +153,19 @@ def do(c, d):
 do(1, 2)
 ```
 
-## 01 Exercice calculer le temps d'exécution
+## 01 Exercice arrondi
+
+Créez un décorateur arrondi qui possède un paramètre precision qui détermine le nombre de chiffre(s) après la virgule. Testez ce décorateur avec la fonction ci-dessous
+
+```python
+def average(*t) :
+    if len(t):
+        return sum(t) / len(t)
+    
+    return None
+```
+
+## 02 Exercice calculer le temps d'exécution
 
 En utilisant le module **time**, créez un décorateur qui permet de calculer le temps d'exécution d'une fonction. Voyez une utilisation ci-dessous :
 
