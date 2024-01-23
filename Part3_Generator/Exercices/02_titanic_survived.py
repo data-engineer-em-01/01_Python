@@ -1,4 +1,3 @@
-import csv
 import typing
 import csv
 
@@ -33,9 +32,9 @@ try:
     while True:
         res = next(g)
         res = { 'survived' : 1, 'sex' : 'F', **res }
+        Passenger(**res)
+        print( Passenger.__dict__ )
         print(res)
 except StopIteration as e:
     # Objet Count pour compter lors des traitements sur les données avec le générateur
     print( f"Nombre de personne répondant aux critères : {c.count}") 
-    
-
