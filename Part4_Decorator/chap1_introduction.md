@@ -165,20 +165,6 @@ def average(*t) :
     return None
 ```
 
-## 02 Exercice calculer le temps d'exécution
-
-En utilisant le module **time**, créez un décorateur qui permet de calculer le temps d'exécution d'une fonction. Voyez une utilisation ci-dessous :
-
-```python
-import time
-
-# Définissez votre décorateur timer ici 
-
-@timer
-def my_fun():
-    pass
-```
-
 ## 02 Exercice factorielle 
 
 Créez un décorateur **memorize**, il permet de mettre, dans un système de cache, le résultat précédent de la fonction factoriel, factoriel est implémentée de manière récursive, voyez le code ci-dessous pour cette fonction.
@@ -192,6 +178,20 @@ import typing
 def factoriel(n: int )-> int:
     
     return n if n <= 1 else factoriel( n-1 ) * n 
+```
+
+## 03 Exercice calculer le temps d'exécution
+
+En utilisant le module **time**, créez un décorateur qui permet de calculer le temps d'exécution d'une fonction. Voyez une utilisation ci-dessous :
+
+```python
+import time
+
+# Définissez votre décorateur timer ici 
+
+@timer
+def my_fun():
+    pass
 ```
 
 ## Définition d'un décorateur avec une classe
