@@ -67,7 +67,28 @@ a = np.array([[1,2,3], [4,5,6], [7,8,9]])
 
 ![slicing 2d](images/slicing_2d.png)
 
-\newpage
+
+### Exercice 
+
+1. Calculez la somme des valeurs en colonne.
+1. Calculez la somme des valeurs en ligne.
+1. Calculez la somme des valeurs en diagonale.
+1. Faites la somme des lignes paires.
+1. Créez une nouvelle matrice en élimimant les lignes dont la somme est pair.
+
+```python
+data = np.array([[4, 3, 8, 5, 2, 2, 0, 1, 8, 6],
+       [1, 7, 6, 2, 7, 0, 1, 6, 1, 1],
+       [7, 2, 8, 0, 8, 2, 5, 8, 3, 7],
+       [6, 5, 7, 8, 2, 2, 2, 9, 2, 3],
+       [6, 4, 3, 6, 6, 6, 9, 5, 8, 2],
+       [0, 2, 9, 0, 4, 5, 3, 4, 0, 1],
+       [0, 3, 5, 1, 4, 6, 0, 4, 5, 6],
+       [0, 3, 5, 7, 4, 9, 3, 7, 4, 8],
+       [1, 3, 1, 2, 9, 4, 4, 9, 5, 4],
+       [6, 5, 0, 0, 1, 7, 9, 0, 9, 5]])
+```
+
 
 ### 7.2 les tableaux 3d
 
