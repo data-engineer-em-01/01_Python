@@ -273,6 +273,8 @@ Utilisez pytest-mock pour le mocking dans les tests.
 
 # test_mocking.py
 
+Dans l'exemple ci-dessous on n'appelle jamais la méthode add effectivement, on mocke son comportement, pour les bases de données que l'on ne teste pas cela est très pratique.
+
 ```python
 class Calculator:
     def add(self, a, b):
@@ -283,10 +285,10 @@ def test_calculator_add(mocker):
     calc = Calculator()
 
     # Utilisation de mocker.patch pour remplacer la méthode add par une version modifiée
-    mocker.patch.object(calc, 'add', return_value=10)
+    mocker.patch.object(calc, 'add', return_value=15)
 
     # Test avec la méthode modifiée
-    result = calc.add(3, 5)
+    result = 15
 
     # Vérification que la méthode modifiée a été appelée avec les bons arguments
     calc.add.assert_called_once_with(3, 5)
