@@ -235,6 +235,33 @@ def test_exception_handling():
         result = 1 / 0
 ```
 
+:rocket:
+Dans la classe Calculator suivante on aurait par exemple une méthode :
+
+```python
+class Calculator:
+    def __init__(self, precision = 2) -> None:
+        self.precision = precision
+
+    def divisor(self, a :float,b :float):
+        # error firts
+        if b == 0 :
+            raise ZeroDivisionError
+        
+        return round( a / b , self.precision)
+```
+
+Dans le fichier de test pour tester l'exeception levée par la classe métier :
+
+```python
+import pytest
+
+def test_divisor(self):
+    c = Calculator()
+    with pytest.raises(ZeroDivisionError):
+        c.divisor(1, 0)
+```
+
 ## Mocking
 
 ### Introduction au Mocking
