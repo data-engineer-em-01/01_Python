@@ -77,6 +77,19 @@ def test_multiply():
 
 ### Utilisation des Méthodes d'Assertion Pytest
 
+>[!NOTE]
+> assert est une instruction native de Python qui permet déjà de gérer des exceptions personnalisées.
+
+:rocket:
+```python
+a = 1
+b = 2
+try:
+    assert 1 != 1, f"Vous pouvez également personnaliser le message d'erreur : {a} != {a+b}"
+except AssertionError as e :
+    print("fail", e)
+```
+
 Pytest offre des méthodes d'assertion. 
 
 Utilisons assert x == y pour vérifier une égalité :
