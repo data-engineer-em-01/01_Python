@@ -2,7 +2,6 @@ class Parser:
 
     def __init__(self, separator):
         self.separator = separator
-        self.parsed_line = list
 
     def parse(self, sentence):
         """
