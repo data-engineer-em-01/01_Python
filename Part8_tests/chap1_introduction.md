@@ -12,6 +12,9 @@ Soit vous travaillez avec Anaconda, soit vous utilisez l'environnement proposé 
 
 Créez la structure des dossiers dans le dossier work de votre Anaconda ou Docker.
 
+>[!WARNING]
+>Attention à bien nommer le fichier `__int__.py` pour les imports des fonctions, classes ... Dans les projets Python, si ce fichier n'existe pas ou est mal écrit vos imports risquent de ne pas marcher.
+
 ```txt
 .
 ├── app.py
