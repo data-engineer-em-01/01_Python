@@ -53,6 +53,35 @@ Pytest est un framework de test pour Python qui offre une syntaxe simple et expr
 >[!NOTE]
 >Il se distingue par sa facilité d'utilisation, il est puissant et ses fonctionnalités sont avancées.
 
+Les tests permettent de tester l'algorithmique de l'application.
+Chaque test doit-être isolé des autres tests (principe d'isolation des tests).
+
+>[!WARNING]
+> Dans l'exemple ci-dessous ce principe et brisé et entrainera des complications dans les tests suivants.
+
+```python
+from src.helpers.StrUpper import StrUpper
+
+s = StrUpper("HELLO")
+
+class TestStrUpper:
+    def test_str1(self):
+        strupper = StrUpper("bonjour")
+        assert strupper.sentence == "bonjour"
+
+    def test_str2(self):
+        strupper = StrUpper("bonjour2")
+        assert strupper.sentence == "bonjour2"
+        
+    def test_str3(self): 
+        # on a fait mutter la variable sentence pour les autres tests on a brisé le principe du test qui doit être isolé
+        s.sentence = "HeLLO"
+        assert s.sentence == "HeLLO"
+        
+    def test_str4(self): 
+        assert s.sentence == "HELLO"
+```
+
 ## Structure des Tests
 
 ### Conventions de Nom de Fichiers et de Fonctions
