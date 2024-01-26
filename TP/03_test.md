@@ -15,8 +15,16 @@ Pour la problématique suivane, vous allez la traiter en TDD.
 ```python
 s = "5.5 + 10 + 30 + 13.7"
 total # 59.2
-
 ```
+
+## 04 Exercice fixtures de tests
+
+```bash
+pip install pytest-datadir
+```
+
+1. Automatisez les tests avec les données d'exemple dans le dossier data pour le test de la somme.
+
 ## 03 Exercice TDD
 
 Créez un scénario de tests pour la classe GenerateMatrix, créez les tests avant d'implémenter la logique dans la classe; puis tester la classe , elle génère des matrices et possède une méthode pour mélanger les lignes de la matrice.
