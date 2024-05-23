@@ -91,6 +91,24 @@ except StopIteration:
     pass
 ```
 
+1. Un autre exemple avec la méthode send
+
+```python
+def generator_with_send():
+    print("Generator started")
+    value = yield 1
+    print(f"Received value: {value}")
+    value = yield 2
+    print(f"Received value: {value}")
+
+gen = generator_with_send()
+print(next(gen))       # Démarre le générateur, produit 1
+print(gen.send("A"))   # Envoie "A" au générateur, produit 2
+# Cet appel provque une exception du type StopIteration
+print(gen.send("B"))   # Envoie "B" au générateur, termine
+```
+
+
 ## 01 Exercice générateur multiplicateur
 
 Créez un générateur qui multiplie chaque nombre généré par un facteur spécifié, ci-dessous un générateur de 2 * 3 à 10.
